@@ -21,18 +21,18 @@
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
-                <li><a class="font-semibold text-[#73BFA1]">Home</a></li>
+                <li><a href="#Home" class="font-semibold text-[#73BFA1]">Home</a></li>
                 <li>
                   <details>
                     <summary class="font-semibold">Servizi</summary>
                     <ul class="p-2">
-                      <li><a>Submenu </a></li>
+                      <li><a href="#Servizi">Submenu </a></li>
                       <li><a>Submenu2</a></li>
                     </ul>
                   </details>
                 </li>
-                <li><a class="font-semibold"> Formazione </a></li>
-                <li><a class="font-semibold"> Chi siamo </a></li>
+                <li><a href="#Formazione" class="font-semibold"> Formazione </a></li>
+                <li><a href="#Chi siamo" class="font-semibold"> Chi siamo </a></li>
                 <li><a class="font-semibold"> Collabora con nol </a></li>
                 <li><a class="font-semibold"> Contattaci </a></li>
               </ul>
@@ -50,24 +50,29 @@
     <aside class="relative">
         <div class="drawer drawer-end  lg:hidden z-50 ">
               <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-              <div class="drawer-side top-16">
+              <div class="drawer-side ">
                 <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                 <ul class="menu bg-base-200 text-base-content h-full w-60 p-4">
+               <img src="images/Logo.png" alt="">
                   
-                  
-                <li><a class="font-semibold"> Home </a></li>
-                <li><a class="font-semibold"> Servizi </a></li>
-                <li><a class="font-semibold"> Formazione </a></li>
-                <li><a class="font-semibold"> Chi siamo </a></li>
-                <li><a class="font-semibold"> Collabora con nol </a></li>
-                <li><a class="font-semibold"> Contattaci </a></li>
+                <li><a href="#Home" class="font-semibold pt-4"> Home </a></li>
+                <li><a href="#Servizi" class="font-semibold"> Servizi </a></li>
+                <li><a href="#Formazione" class="font-semibold"> Formazione </a></li>
+                <li><a href="#Chi siamo" class="font-semibold"> Chi siamo </a></li>
+                <li><a href="#" class="font-semibold"> Collabora con nol </a></li>
+                <li><a href="#" class="font-semibold pb-4"> Contattaci </a></li>
+                    <div class="">
+              <a class="bg-[#73BFA1] px-6 py-2 rounded-full text-white"
+                >E-learning</a
+              >
+            </div>
                 </ul>
               </div>
             </div>
     </aside>
 
     <main class="mx-auto">
-      <section class="home bg-gradient-to-l from-white to-green-50 ">
+      <section class="home bg-gradient-to-l from-white to-green-50 " id="Home">
         <div class="container mx-auto">
           <div class=" ">
             <div
@@ -106,7 +111,7 @@
         </div>
       </section>
 
-      <section class="">
+      <section class="" id="Servizi">
         <div class="container mx-auto">
           <div>
             <p class="text-lg lg:text-2xl font-bold pl-4 pb-20">
@@ -477,7 +482,7 @@
         </div>
       </section>
 
-      <section class="py-10">
+      <section class="py-10" id="Formazione">
         <div class="container mx-auto px-4">
           <div class="md:flex gap-6">
             <div class="space-y-6">
@@ -582,7 +587,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="Chi siamo">
         <div class="h-[670px] pt-10">
           <div
             class="hidden lg:block bg-[#73BFA1] absolute right-0 w-[25%] h-[670px]"
