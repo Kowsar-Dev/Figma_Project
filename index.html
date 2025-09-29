@@ -3,47 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
-    <header>
-      <nav>
+  <body class="overflow-x-hidden">
+    <header class="sticky top-0 left-0 z-50 bg-white/90 backdrop:blur-2xl">
+      <nav class="">
         <section class="container mx-auto">
           <div class="navbar">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-                >
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Sub</a></li>
-                      <li><a>Sub2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
-                </ul>
+              <div class="md:hidden p-4">
+                <label for="my-drawer"lass="btn btn-primary drawer-button"><i class="fa-solid fa-bars"></i></label>
               </div>
+
               <a class=""><img class="" src="images/Logo.png" alt="" /></a>
             </div>
             <div class="navbar-center hidden lg:flex">
@@ -74,18 +47,39 @@
       </nav>
     </header>
 
-    <main>
-      <section>
+    <aside class="relative">
+        <div class="drawer drawer-end  lg:hidden z-50 ">
+              <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+              <div class="drawer-side top-16">
+                <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu bg-base-200 text-base-content h-full w-60 p-4">
+                  
+                  
+                <li><a class="font-semibold"> Home </a></li>
+                <li><a class="font-semibold"> Servizi </a></li>
+                <li><a class="font-semibold"> Formazione </a></li>
+                <li><a class="font-semibold"> Chi siamo </a></li>
+                <li><a class="font-semibold"> Collabora con nol </a></li>
+                <li><a class="font-semibold"> Contattaci </a></li>
+                </ul>
+              </div>
+            </div>
+    </aside>
+
+    <main class="mx-auto">
+      <section class="home bg-gradient-to-l from-white to-green-50 ">
         <div class="container mx-auto">
           <div class=" ">
             <div
-              class="lg:h-[700px] flex-col md:flex md:flex-row-reverse items-center justify-between py-8"
+              class="lg:h-[700px] flex-col md:flex md:flex-row-reverse items-center justify-between py-8 relative"
             >
+             <div class="bg-gradient-to-r lg:from-green-100 from-green-100/5 to-green-50 absolute -z-0 md:top-56 lg:left-0 w-80 h-80 blur-3xl  animate animate-pulse"></div>
               <img
                 src="images/download (1).png"
                 class="mx-w-xs sm:max-w-sm lg:max-w-xl rounded-lg px-6"
               />
-              <div class="px-6 py-4">
+              <div class="px-6 py-4 z-30 ">
+              
                 <p
                   class="text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold font-sans"
                 >
@@ -100,6 +94,7 @@
                   più prezioso: le persone che contribuiscono al successo della
                   tua azienda. Affidati a noi.
                 </p>
+                
                 <button
                   class="bg-[#73BFA1] px-4 py-2 text-xs text-white rounded-full"
                 >
@@ -111,14 +106,14 @@
         </div>
       </section>
 
-      <section>
+      <section class="">
         <div class="container mx-auto">
           <div>
             <p class="text-lg lg:text-2xl font-bold pl-4 pb-20">
               ESPLORA IL NOSTRO CATALOGO CORSI
             </p>
           </div>
-          <div class="flex flex-wrap justify-between">
+          <div class=" md:flex md:flex-wrap lg:flex lg:flex-nowrap xl:justify-between">
             <div class="py-4">
               <div
                 class="card bg-base-100 min-w-40 md:max-w-80 lg:max-w-96 mx-8 shadow-sm"
@@ -482,94 +477,217 @@
         </div>
       </section>
 
-      <section>
-        <div class="container mx-auto ">
-         <div class="lg:flex lg:justify-between md:flex lg:mt-20 lg:px-8 items-center px-2">
-             <div class=" lg:flex lg:flex-wrap">
-            <div class="lg:flex  p-4">
-              <span>
-                <img class="w-80 h-auto  lg:w-96 lg:h-50 object-cover" src="images/images1.jpg" alt="" />
-              </span>
-              <div class="w-80 lg:w-96 ml-4">
-                <p class="text-xs text-[#20B486] font-bold">
-                  November 16, 2015
-                </p>
-                <p class="py-2 font-bold">Three Pillars of User Delight</p>
-                <p class="py-2 w-78">
-                  Delight can be experienced viscerally, behaviourally, and
-                  reflectively. A great design is ...
-                </p>
-                <button
-                  class="bg-pink-100 text-pink-400 px-4 rounded-full mt-2"
-                >
-                  Research
-                </button>
-                <button
-                  class="bg-blue-100 text-blue-400 px-4 rounded-full mt-2"
-                >
-                  soft skills
-                </button>
-              </div>
-            </div>
-            <div class="lg:flex lg:mt-8 p-4">
-              <span>
-                <img class="w-80 h-auto lg:w-96 lg:h-44 object-cover" src="images/images2.jpg" alt="" />
-              </span>
-              <div class="w-96 ml-4">
-                <p class="text-xs text-[#20B486] font-bold">
-                  November 16, 2015
-                </p>
-                <p class="py-2 font-bold">Three Pillars of User Delight</p>
-                <p class="py-2 w-78">
-                  Delight can be experienced viscerally, behaviourally, and
-                  reflectively. A great design is ...
-                </p>
-                <button
-                  class="bg-pink-100 text-pink-400 px-4 rounded-full mt-2"
-                >
-                  Research
-                </button>
-                <button
-                  class="bg-blue-100 text-blue-400 px-4 rounded-full mt-2"
-                >
-                  soft skills
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="p-4">
-            <div>
-               <span ><img class="w-80 h-auto lg:w-96 xl:w-160 lg:h-60 object-cover" src="images/images3.jpg" alt=""></span>
-            </div>
-            <div class="mt-4">
-                 <div class="">
-                <p class="text-xs text-[#20B486] font-bold">
-                  November 16, 2015
-                </p>
-                <p class="py-2 lg:text-2xl font-bold">Agile Development Projects and Usability</p>
-                <p class="py-2 w-78 lg:w-96 xl:w-140">
-                  Agile methods aim to overcome usability barriers in traditional development, but post new threats to user experience quality. 
-                </p>
-                <button
-                  class="bg-pink-100 text-pink-400 px-4 rounded-full mt-2"
-                >
-                  Research
-                </button>
-                <button
-                  class="bg-blue-100 text-blue-400 px-4 rounded-full mt-2"
-                >
-                  soft skills
-                </button>
+      <section class="py-10">
+        <div class="container mx-auto px-4">
+          <div class="md:flex gap-6">
+            <div class="space-y-6">
+              <div class="flex flex-col lg:flex-row p-4 shadow-sm rounded-2xl">
+                <img
+                  class="w-full lg:w-40 xl:w-56 h-48 object-cover rounded-lg"
+                  src="images/images1.jpg"
+                  alt=""
+                />
+                <div class="mt-4 lg:mt-0 lg:ml-4 flex flex-col justify-between">
+                  <div>
+                    <p class="text-xs text-[#20B486] font-bold">
+                      November 16, 2015
+                    </p>
+                    <p class="py-2 font-bold">Three Pillars of User Delight</p>
+                    <p class="text-sm text-gray-600">
+                      Delight can be experienced viscerally, behaviourally, and
+                      reflectively. A great design is ...
+                    </p>
+                  </div>
+                  <div class="mt-3 flex gap-2 flex-wrap">
+                    <button
+                      class="bg-pink-100 text-pink-400 px-4 py-1 rounded-full text-sm"
+                    >
+                      Research
+                    </button>
+                    <button
+                      class="bg-blue-100 text-blue-400 px-4 py-1 rounded-full text-sm"
+                    >
+                      Soft Skills
+                    </button>
+                  </div>
+                </div>
               </div>
 
+              <div class="flex flex-col lg:flex-row p-4 shadow-sm rounded-2xl">
+                <img
+                  class="w-full lg:w-40 xl:w-56 h-48 object-cover rounded-lg"
+                  src="images/images2.jpg"
+                  alt=""
+                />
+                <div class="mt-4 lg:mt-0 lg:ml-4 flex flex-col justify-between">
+                  <div>
+                    <p class="text-xs text-[#20B486] font-bold">
+                      November 16, 2015
+                    </p>
+                    <p class="py-2 font-bold">Three Pillars of User Delight</p>
+                    <p class="text-sm text-gray-600">
+                      Delight can be experienced viscerally, behaviourally, and
+                      reflectively. A great design is ...
+                    </p>
+                  </div>
+                  <div class="mt-3 flex gap-2 flex-wrap">
+                    <button
+                      class="bg-pink-100 text-pink-400 px-4 py-1 rounded-full text-sm"
+                    >
+                      Research
+                    </button>
+                    <button
+                      class="bg-blue-100 text-blue-400 px-4 py-1 rounded-full text-sm"
+                    >
+                      Soft Skills
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 shadow-sm rounded-2xl">
+              <img
+                class="w-full h-54 lg:h-70 object-cover rounded-lg"
+                src="images/images3.jpg"
+                alt=""
+              />
+              <div class="mt-4">
+                <p class="text-xs text-[#20B486] font-bold">
+                  November 16, 2015
+                </p>
+                <p class="py-2 lg:text-2xl font-bold">
+                  Agile Development Projects and Usability
+                </p>
+                <p class="text-sm text-gray-600">
+                  Agile methods aim to overcome usability barriers in
+                  traditional development, but pose new threats to user
+                  experience quality.
+                </p>
+                <div class="mt-3 flex gap-2 flex-wrap">
+                  <button
+                    class="bg-pink-100 text-pink-400 px-4 py-1 rounded-full text-sm"
+                  >
+                    Research
+                  </button>
+                  <button
+                    class="bg-blue-100 text-blue-400 px-4 py-1 rounded-full text-sm"
+                  >
+                    Soft Skills
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-         </div>
         </div>
       </section>
-      <section></section>
-    </main>
 
-    <footer></footer>
+      <section>
+        <div class="h-[670px] pt-10">
+          <div
+            class="hidden lg:block bg-[#73BFA1] absolute right-0 w-[25%] h-[670px]"
+          ></div>
+          <div class="container mx-auto lg:flex">
+            <div
+              class="mx-auto shadow-sm lg:shadow-none p-4 flex flex-col justify-center items-center lg:block lg:mt-40"
+            >
+              <div class="px-2">
+                <span
+                  ><p class="text-2xl font-semibold">
+                    Condividi la tua recensione con noi
+                  </p>
+                </span>
+                <span
+                  ><p class="lg:w-[70%] py-4">
+                    Compila il modulo per condividere la tua esperienza. La tua
+                    recensione sarà visibile dopo l’approvazione.
+                  </p>
+                </span>
+                <input
+                  class="border w-full lg:w-[70%] px-2 py-2"
+                  type="text"
+                  placeholder="Your Name"
+                />
+                <span class="my-4">
+                  <p class="text-xl font-semibold">Feedback sulla sessione</p>
+                  <p>Valuta la tua esperienza qui sotto</p>
+                </span>
+                <p class="mt-4">Lascia un commento</p>
+                <textarea  class="border w-full lg:w-[70%] px-2 h-[80px] "
+                name="" id=""   placeholder="Lascia un commento"
+                ></textarea>
+                <button class="bg-[#73BFA1] rounded-full w-full lg:w-[70%] mt-8 flex flex-col">
+                  invia
+                </button>
+              </div>
+            </div>
+              <iframe
+                class="w-full lg:h-[600px] lg:w-[500px] relative top-10 justify-center"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29201.370700275926!2d90.4200192!3d23.8125056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c73499552657%3A0xed30abd127dd179f!2sMAK%20Tech%20Solution%20(Jamuna)!5e0!3m2!1sen!2sbd!4v1759123569658!5m2!1sen!2sbd"
+              ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-20 bg-[#101828]">
+       <nav class="block md:hidden container mx-auto p-20">
+        <img src="images/Group.png" alt="">
+      </nav>
+       
+      <section
+        class="grid grid-cols-2 md:grid-cols-none footer sm:footer-horizontal bg-[#101828] text-white p-10 container mx-auto"
+      >
+          <nav class="hidden md:block">
+        <img src="images/Group.png" alt="">
+      </nav> 
+         <nav>
+          <h6 class="footer-title">Prodotto</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Azienda</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Sociale</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legale</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        
+       </div>
+      </section>
+      <section
+        class="footer bg-[#101828] text-white border-[#101828] border-t px-10 py-4 container mx-auto md:flex justify-between items-center"
+      >
+        <aside class="grid-flow-col items-center">
+          
+         
+          <p>
+            © 2022 UnoSicurezza. All rights reserved
+          </p>
+        </aside>
+        <nav class=" ">
+          <div>
+             <p>Download App</p>
+            <a class="flex">
+             <span class="m-2"><img src="images/Google Play.png" alt=""></span>
+             <span class="m-2"><img src="images/Group appstore.png" alt=""></span>
+            </a>
+          </div>
+        </nav>
+      </section>
+    </footer>
   </body>
 </html>
