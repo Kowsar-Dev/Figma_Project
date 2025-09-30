@@ -2,7 +2,8 @@
 @plugin "daisyui";
 
 @theme {
-    --breakpoint-xs:"340px"
+    --breakpoint-xs:"340px";
+
 }
 html {
       scroll-behavior: smooth; 
